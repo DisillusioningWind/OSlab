@@ -11,7 +11,7 @@ play: os.img
 	$(QEMU) -serial stdio os.img
 
 debug: os.img
-	$(QEMU) -serial stdio -s -S os.img
+	$(QEMU)-serial stdio -s -S os.img
 gdb:
 	gdb -n -x ./.gdbconf/.gdbinit
 
