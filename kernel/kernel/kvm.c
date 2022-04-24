@@ -79,7 +79,7 @@ void initProc() {
 	pcb[1].regs.es = USEL(4);
 	pcb[1].regs.fs = USEL(4);
 	pcb[1].regs.gs = USEL(4);
-
+	
 	current = 0; // kernel idle process
 	asm volatile("movl %0, %%esp"::"m"(pcb[0].stackTop)); // switch to kernel stack for kernel idle process
 	enableInterrupt();
